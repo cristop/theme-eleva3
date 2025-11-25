@@ -1,0 +1,10 @@
+name: Theme Eleva
+description: Tema base para October CMS
+author: Eleva
+homepage: ''
+
+# Configuración del tema
+vars:
+    site_name: 'Eleva'
+    site_description: 'Descripción del sitio'
+

@@ -1,0 +1,21 @@
+title = "Home"
+url = "/"
+layout = "default"
+meta_title = "Home"
+meta_description = "Página principal"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+==
+{% put styles %}
+<link rel="stylesheet" href="{{ 'assets/css/partials/home.css'|theme }}" async>
+{% endput %}
+
+<section id="home" class="section">
+    <div class="container">
+        <h1>Bienvenido</h1>
+        <p>Esta es la página principal del sitio.</p>
+    </div>
+</section>
+

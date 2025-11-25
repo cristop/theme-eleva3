@@ -1,0 +1,52 @@
+<header id="navHeader">
+    <div class="container-fluid">
+        <div class="responsiveMenu">
+            <!-- Menú hamburguesa responsive -->
+        </div>
+        
+        <nav class="menu-main">
+            <ul>
+                <li><a href="{{ 'home'|page }}" class="{{ this.page.id == 'home' ? 'active' }}">Home</a></li>
+                <li>
+                    <a href="/#nuestros-servicios">Servicios</a>
+                    <ul>
+                        <!-- Submenú de servicios -->
+                    </ul>
+                </li>
+                <li><a href="{{ 'clientes'|page }}">Clientes</a></li>
+                <li><a href="{{ 'contacto'|page }}">Contacto</a></li>
+                <li><a href="{{ 'blog'|page }}">Blog</a></li>
+            </ul>
+        </nav>
+        
+        <a href="/" class="logo">
+            <img src="{{ 'assets/img/logo.svg'|theme }}" alt="Logo" />
+        </a>
+        
+        <nav class="menu-main menu-right">
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ 'assets/img/images/new-design/SVG/in.svg'|theme }}" alt="LinkedIn" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ 'assets/img/images/new-design/SVG/youtube.svg'|theme }}" alt="YouTube" />
+                    </a>
+                </li>
+                <li>
+                    <!-- Selector de idioma -->
+                    <div class="language-selector">
+                        <span>ES</span>
+                        <ul>
+                            <li><a href="#">Español</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
