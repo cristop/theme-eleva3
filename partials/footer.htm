@@ -1,28 +1,76 @@
-<footer>
-    <div class="container">
-        <div class="line"></div>
-        
-        <ul class="social-links">
-            <li>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="wow fadeIn">
-                    <img src="{{ 'assets/img/images/new-design/SVG/in.svg'|theme }}" alt="LinkedIn" />
-                </a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="wow fadeIn">
-                    <img src="{{ 'assets/img/images/new-design/SVG/youtube.svg'|theme }}" alt="YouTube" />
-                </a>
-            </li>
-        </ul>
-        
-        <ul class="legal-links wow fadeIn">
-            <li><a href="{{ 'aviso-legal'|page }}">Aviso Legal</a></li>
-            <li><a href="{{ 'politicas-de-privacidad'|page }}">Política de privacidad</a></li>
-            <li><a href="{{ 'cookies'|page }}">Política de cookies</a></li>
-            <li>
-                <button type="button" id="cookie-preferences">Preferencias de Cookies</button>
-            </li>
-        </ul>
+<!-- === Footer === -->
+<footer class="bg-brand-purple pt-12 pb-12 text-white">
+    <div class="mx-auto max-w-6xl px-6">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-12">
+            <!-- Primera columna - Branding (más ancha) -->
+            <div class="md:col-span-4 space-y-4">
+                <!-- Logo Eleva -->
+                <img src="{{ 'assets/img/logo_footer.svg'|theme }}" alt="Eleva - Salesforce Partner" class="h-16 w-auto" />
+                <!-- Logo Salesforce con PARTNER -->
+                <div class="flex items-center gap-3 pt-4">
+                    <img src="{{ 'assets/img/home/salesforce logo 1.svg'|theme }}" alt="Salesforce" class="h-14 w-auto" />
+                    <span class="text-sm font-semibold uppercase tracking-wide">PARTNER</span>
+                </div>
+            </div>
+
+            <!-- Segunda columna - Soluciones -->
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-lg font-normal text-white">Soluciones</h3>
+                <ul class="space-y-2 text-sm text-white/80">
+                    <li><a href="#soluciones" class="transition hover:text-white">Marketing Cloud</a></li>
+                    <li><a href="#soluciones" class="transition hover:text-white">Sales Cloud</a></li>
+                    <li><a href="#soluciones" class="transition hover:text-white">Service Cloud</a></li>
+                    <li><a href="#soluciones" class="transition hover:text-white">Agent Force</a></li>
+                </ul>
+            </div>
+
+            <!-- Tercera columna - Acerca de -->
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-lg font-normal text-white">Acerca de</h3>
+                <!-- Items de "Acerca de" pueden agregarse aquí si es necesario -->
+            </div>
+
+            <!-- Cuarta columna - Casos de éxito -->
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-lg font-normal text-white">Casos de éxito</h3>
+                <!-- Items de "Casos de éxito" pueden agregarse aquí si es necesario -->
+            </div>
+
+            <!-- Quinta columna - Contacto -->
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-lg font-normal text-white">Contacto</h3>
+                <div class="space-y-3 text-sm text-white/80">
+                    <p>
+                        <a href="mailto:hola@elevagroup.com" class="transition hover:text-white">hola@elevagroup.com</a>
+                    </p>
+                    <p>
+                        <a href="tel:+54928232324" class="transition hover:text-white">+54 9282 32324</a>
+                    </p>
+                </div>
+                <!-- Redes sociales -->
+                <div class="flex gap-4 pt-2">
+                    <a href="#" aria-label="Instagram" class="text-white/80 transition hover:text-white">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-white/80 transition hover:text-white">
+                        <i class="fa-brands fa-youtube text-xl"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="text-white/80 transition hover:text-white">
+                        <i class="fa-brands fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="mt-12">
+            <div class="flex flex-col gap-2 text-xs text-white/80">
+                <p>© 2025 - Duo Diseño & Comunicación.</p>
+                <p>
+                    <a href="#" class="transition hover:text-white">Terms of Service</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="transition hover:text-white">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
-

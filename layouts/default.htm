@@ -2,12 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <title>{{ this.page.meta_title ?: this.page.title }} - {{ this.theme.site_name }}</title>
-    <meta name="description" content="{{ this.page.meta_description }}">
-    <meta name="title" content="{{ this.page.meta_title ?: this.page.title }}">
+    <meta name="description" content="{{ this.page.meta_description ?: 'Eleva, partner certificado de Salesforce. Consultoría, implementación y soporte para llevar tu CRM al siguiente nivel.' }}">
     
     <link rel="canonical" href="{{ this.page.url | app }}">
     
@@ -23,23 +22,42 @@
     <!-- Robots -->
     <meta name="robots" content="{{ this.page.robot_index }},{{ this.page.robot_follow }}">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- AOS - Animate On Scroll Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     
     {% styles %}
 </head>
-<body>
+<body class="bg-slate-50 text-slate-700">
     <!-- Preloader -->
-    <div id="preloader" style="display: none;">
-        <!-- Preloader content -->
+    <div id="preloader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-500">
+        <div class="h-10 w-10 animate-spin rounded-full border-4 border-slate-200 border-t-brand-purple"></div>
     </div>
     
     {% partial 'header' %}
     
-    {% page %}
+    <main>
+        {% page %}
+    </main>
     
     {% partial 'footer' %}
+    
+    <!-- Botón Volver arriba flotante -->
+    <button
+        id="scroll-to-top"
+        type="button"
+        class="fixed bottom-8 right-8 z-50 hidden items-center justify-center gap-2 rounded-full bg-brand-fuchsia text-sm font-normal text-white transition-all duration-300 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-fuchsia shadow-lg w-12 h-12 md:w-auto md:h-auto md:px-4 md:py-3 translate-y-4 opacity-0"
+        style="will-change: transform, opacity;"
+        aria-label="Volver arriba"
+    >
+        <i class="fa-solid fa-chevron-up text-xs"></i>
+        <span class="hidden md:inline">Volver arriba</span>
+    </button>
+    
+    <!-- AOS - Animate On Scroll Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     
     {% framework extras %}
     {% scripts %}

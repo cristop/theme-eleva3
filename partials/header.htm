@@ -1,52 +1,83 @@
-<header id="navHeader">
-    <div class="container-fluid">
-        <div class="responsiveMenu">
-            <!-- Menú hamburguesa responsive -->
-        </div>
-        
-        <nav class="menu-main">
-            <ul>
-                <li><a href="{{ 'home'|page }}" class="{{ this.page.id == 'home' ? 'active' }}">Home</a></li>
-                <li>
-                    <a href="/#nuestros-servicios">Servicios</a>
-                    <ul>
-                        <!-- Submenú de servicios -->
-                    </ul>
-                </li>
-                <li><a href="{{ 'clientes'|page }}">Clientes</a></li>
-                <li><a href="{{ 'contacto'|page }}">Contacto</a></li>
-                <li><a href="{{ 'blog'|page }}">Blog</a></li>
-            </ul>
-        </nav>
-        
-        <a href="/" class="logo">
-            <img src="{{ 'assets/img/logo.svg'|theme }}" alt="Logo" />
-        </a>
-        
-        <nav class="menu-main menu-right">
-            <ul>
-                <li>
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ 'assets/img/images/new-design/SVG/in.svg'|theme }}" alt="LinkedIn" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ 'assets/img/images/new-design/SVG/youtube.svg'|theme }}" alt="YouTube" />
-                    </a>
-                </li>
-                <li>
-                    <!-- Selector de idioma -->
-                    <div class="language-selector">
-                        <span>ES</span>
-                        <ul>
-                            <li><a href="#">Español</a></li>
-                            <li><a href="#">English</a></li>
-                        </ul>
+<!-- === Header principal con navegación sticky === -->
+<header class="sticky top-0 z-50">
+    <div class="border-b border-slate-200 bg-white/90 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between gap-8 px-6 py-6">
+            <!-- Logo -->
+            <a href="{{ 'home'|page }}" class="flex items-center gap-2">
+                <img src="{{ 'assets/img/Eleva.svg'|theme }}" alt="Eleva - Salesforce Partner" class="h-12 w-auto" />
+            </a>
+            <!-- Navegación desktop -->
+            <nav class="hidden items-center gap-10 text-base font-menu text-black md:flex">
+                <div class="group relative">
+                    <button
+                        type="button"
+                        class="normal-case text-black font-menu transition hover:text-brand-purple focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-cyan"
+                        data-desktop-submenu
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                    >
+                        Soluciones
+                    </button>
+                    <!-- Contenedor con padding para bajar el submenú -->
+                    <div class="pointer-events-none absolute left-1/2 top-1/2 z-40 pt-8 -translate-x-1/2 opacity-0 transition group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                        <div
+                            class="w-56 rounded-3xl bg-white p-4 shadow-dropdown"
+                            role="menu"
+                            aria-label="Submenú Soluciones"
+                        >
+                            <ul class="space-y-2 text-left text-base font-body normal-case text-black">
+                                <li><a href="#soluciones" class="block rounded-xl px-4 py-2 transition hover:bg-slate-100 hover:text-brand-purple" role="menuitem">Marketing Cloud</a></li>
+                                <li><a href="#soluciones" class="block rounded-xl px-4 py-2 transition hover:bg-slate-100 hover:text-brand-purple" role="menuitem">Sales Cloud</a></li>
+                                <li><a href="#soluciones" class="block rounded-xl px-4 py-2 transition hover:bg-slate-100 hover:text-brand-purple" role="menuitem">Service Cloud</a></li>
+                                <li><a href="#soluciones" class="block rounded-xl px-4 py-2 transition hover:bg-slate-100 hover:text-brand-purple" role="menuitem">Agentforce</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </li>
-            </ul>
-        </nav>
+                </div>
+                <a href="#por-que-eleva" class="text-black font-menu transition hover:text-brand-purple normal-case">Por qué Eleva</a>
+                <a href="#casos" class="text-black font-menu transition hover:text-brand-purple normal-case">Casos de éxito</a>
+            </nav>
+            <!-- CTA desktop -->
+            <a href="#contacto" class="btn-primary hidden md:inline-flex text-sm">
+                <span>Contactános</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <!-- Botón menú mobile -->
+            <button
+                class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 text-brand-purple md:hidden"
+                type="button"
+                data-menu-toggle
+                aria-label="Abrir menú"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
     </div>
+    <!-- Navegación mobile -->
+    <nav
+        data-mobile-menu
+        class="absolute top-full left-0 right-0 z-50 mx-6 mb-6 hidden flex-col rounded-3xl border border-slate-200 bg-white shadow-lg md:hidden overflow-hidden py-4"
+    >
+        <button
+            type="button"
+            class="flex w-full items-center justify-between px-6 py-4 text-left text-slate-700 font-menu transition hover:bg-slate-100 hover:text-brand-purple"
+            data-mobile-submenu-toggle
+            aria-expanded="false"
+        >
+            <span>Soluciones</span>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+        </button>
+        <div class="hidden flex-col bg-white w-full" data-mobile-submenu>
+            <a href="#soluciones" class="block w-full px-6 py-3 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-brand-purple">Marketing Cloud</a>
+            <a href="#soluciones" class="block w-full px-6 py-3 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-brand-purple">Sales Cloud</a>
+            <a href="#soluciones" class="block w-full px-6 py-3 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-brand-purple">Service Cloud</a>
+            <a href="#soluciones" class="block w-full px-6 py-3 text-sm text-slate-600 transition hover:bg-slate-100 hover:text-brand-purple">Agentforce</a>
+        </div>
+        <a href="#por-que-eleva" class="block w-full px-6 py-4 font-menu text-slate-700 transition hover:bg-slate-100 hover:text-brand-purple">Por qué Eleva</a>
+        <a href="#casos" class="block w-full px-6 py-4 font-menu text-slate-700 transition hover:bg-slate-100 hover:text-brand-purple">Casos de éxito</a>
+        <a href="#contacto" class="btn-primary mx-6 mt-0 w-auto justify-center">
+            <span>CONTÁCTANOS</span>
+            <i class="fa-solid fa-arrow-right text-sm"></i>
+        </a>
+    </nav>
 </header>
-
