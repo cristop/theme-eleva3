@@ -1,0 +1,112 @@
+<!-- === Bloque de eventos y casos destacados === -->
+<section id="casos" class="relative overflow-hidden pt-24">
+    <div class="relative flex h-auto md:h-[600px] w-full" data-aos="fade-up">
+        <!-- Carrusel de contenido -->
+        <div class="relative h-full w-full overflow-hidden">
+            <div id="eventos-carousel" class="flex h-full transition-transform duration-500 ease-in-out">
+                <!-- Slide 1 -->
+                <div class="min-w-full flex h-full">
+                    <div class="flex flex-col md:flex-row h-full w-full">
+                        <div class="flex h-auto md:h-full w-full md:w-[45%] flex-col justify-center bg-brand-pink px-14 md:pr-12 md:pl-20 pt-12 pb-8 md:py-16 text-white">
+                            <h2 class="mb-6 text-4xl md:text-5xl font-normal leading-tight md:leading-tight text-white max-w-[70%]">
+                                Eleva en cada escenario clave
+                            </h2>
+                            <p class="mb-8 max-w-md text-base md:text-xl leading-relaxed text-white">
+                                Participamos activamente en los <span class="font-medium">encuentros más relevantes de la industria</span>, acercando nuestra visión y experiencia.
+                            </p>
+                            <div class="mb-8 flex flex-wrap items-center gap-4 text-sm uppercase tracking-widest text-white">
+                                <img src="{{ 'assets/img/home/cordoba-tech-1.png'|theme }}" alt="Córdoba Tech Week" class="h-20 w-auto object-contain" />
+                                <div class="text-white whitespace-normal">
+                                    <span class="block">24 y 25</span>
+                                    <span class="block">de septiembre</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-64 md:h-full w-full md:w-[55%]">
+                            <img
+                                src="{{ 'assets/img/home/eleva_imagen.png'|theme }}"
+                                alt="Equipo de Eleva en evento"
+                                class="h-full w-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 (duplicado para prueba) -->
+                <div class="min-w-full flex h-full">
+                    <div class="flex flex-col md:flex-row h-full w-full">
+                        <div class="flex h-auto md:h-full w-full md:w-[45%] flex-col justify-center bg-brand-pink px-14 md:pr-12 md:pl-20 pt-12 pb-8 md:py-16 text-white">
+                            <h2 class="mb-6 text-4xl md:text-5xl font-normal leading-tight md:leading-tight text-white max-w-[70%]">
+                                Eleva en cada escenario clave
+                            </h2>
+                            <p class="mb-8 max-w-md text-base md:text-xl leading-relaxed text-white">
+                                Participamos activamente en los <span class="font-medium">encuentros más relevantes de la industria</span>, acercando nuestra visión y experiencia.
+                            </p>
+                            <div class="mb-8 flex flex-wrap items-center gap-4 text-sm uppercase tracking-widest text-white">
+                                <img src="{{ 'assets/img/home/cordoba-tech-1.png'|theme }}" alt="Córdoba Tech Week" class="h-20 w-auto object-contain" />
+                                <div class="text-white whitespace-normal">
+                                    <span class="block">24 y 25</span>
+                                    <span class="block">de septiembre</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-64 md:h-full w-full md:w-[55%]">
+                            <img
+                                src="{{ 'assets/img/home/eleva_imagen.png'|theme }}"
+                                alt="Equipo de Eleva en evento"
+                                class="h-full w-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 (duplicado para prueba) -->
+                <div class="min-w-full flex h-full">
+                    <div class="flex flex-col md:flex-row h-full w-full">
+                        <div class="flex h-auto md:h-full w-full md:w-[45%] flex-col justify-center bg-brand-pink px-14 md:pr-12 md:pl-20 pt-12 pb-8 md:py-16 text-white">
+                            <h2 class="mb-6 text-4xl md:text-5xl font-normal leading-tight md:leading-tight text-white max-w-[70%]">
+                                Eleva en cada escenario clave
+                            </h2>
+                            <p class="mb-8 max-w-md text-base md:text-xl leading-relaxed text-white">
+                                Participamos activamente en los <span class="font-medium">encuentros más relevantes de la industria</span>, acercando nuestra visión y experiencia.
+                            </p>
+                            <div class="mb-8 flex flex-wrap items-center gap-4 text-sm uppercase tracking-widest text-white">
+                                <img src="{{ 'assets/img/home/cordoba-tech-1.png'|theme }}" alt="Córdoba Tech Week" class="h-20 w-auto object-contain" />
+                                <div class="text-white whitespace-normal">
+                                    <span class="block">24 y 25</span>
+                                    <span class="block">de septiembre</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-64 md:h-full w-full md:w-[55%]">
+                            <img
+                                src="{{ 'assets/img/home/eleva_imagen.png'|theme }}"
+                                alt="Equipo de Eleva en evento"
+                                class="h-full w-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Flechas de navegación -->
+        <button
+            type="button"
+            id="eventos-prev"
+            class="absolute left-1 md:left-4 top-[30%] md:top-1/2 md:-translate-y-1/2 flex h-12 w-12 items-center justify-center text-white transition hover:text-brand-cyan z-10"
+            aria-label="Evento anterior"
+        >
+            <i class="fa-solid fa-chevron-left text-3xl"></i>
+        </button>
+        <button
+            type="button"
+            id="eventos-next"
+            class="absolute right-1 md:right-4 top-[30%] md:top-1/2 md:-translate-y-1/2 flex h-12 w-12 items-center justify-center text-white transition hover:text-brand-cyan z-10"
+            aria-label="Evento siguiente"
+        >
+            <i class="fa-solid fa-chevron-right text-3xl"></i>
+        </button>
+    </div>
+</section>
+

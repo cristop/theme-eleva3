@@ -207,6 +207,9 @@ if (scrollToTopBtn) {
   let isVisible = false
   let isAnimating = false
   let scrollTimeout = null
+  let isScrollingToTop = false
+  let lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+  let animationFrameId = null
 
   // Mostrar/ocultar botón según el scroll
   function toggleScrollToTopButton() {
@@ -255,6 +258,24 @@ if (scrollToTopBtn) {
   // Event listener para el scroll con throttling
   let ticking = false
   window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop
+    
+    // Detectar si el usuario está haciendo scroll manualmente
+    if (isScrollingToTop) {
+      // Si la posición actual es mayor que la última, el usuario está scrolleando hacia abajo
+      if (currentScroll > lastScrollPosition) {
+        // Cancelar la animación
+        isScrollingToTop = false
+        if (animationFrameId !== null) {
+          cancelAnimationFrame(animationFrameId)
+          animationFrameId = null
+        }
+      }
+    }
+    
+    // Actualizar la última posición de scroll
+    lastScrollPosition = currentScroll
+    
     if (!ticking) {
       window.requestAnimationFrame(() => {
         toggleScrollToTopButton()
@@ -264,12 +285,44 @@ if (scrollToTopBtn) {
     }
   })
 
-  // Event listener para el click
-  scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
+  // Event listener para el click con scroll animado
+  scrollToTopBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    
+    // Cancelar cualquier animación previa
+    if (animationFrameId !== null) {
+      cancelAnimationFrame(animationFrameId)
+    }
+    
+    isScrollingToTop = true
+    lastScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+    
+    // Función de scroll animado suave
+    const scrollToTop = () => {
+      if (!isScrollingToTop) {
+        // La animación fue cancelada
+        return
+      }
+      
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop
+      
+      if (currentScroll > 0) {
+        // Calcular la nueva posición con easing suave (ease-out)
+        const scrollStep = currentScroll * 0.1
+        window.scrollTo(0, currentScroll - scrollStep)
+        
+        // Continuar animando hasta llegar arriba
+        animationFrameId = requestAnimationFrame(scrollToTop)
+      } else {
+        // Asegurar que llegamos exactamente a 0
+        window.scrollTo(0, 0)
+        isScrollingToTop = false
+        animationFrameId = null
+      }
+    }
+    
+    // Iniciar la animación
+    animationFrameId = requestAnimationFrame(scrollToTop)
   })
 
   // Verificar el estado inicial

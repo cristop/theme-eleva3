@@ -1,0 +1,123 @@
+<!-- === Testimonios y slider === -->
+<section id="por-que-eleva" class="pt-16 pb-12">
+    <div class="mx-auto max-w-6xl px-6" data-aos="fade-up" data-aos-delay="200">
+        <header class="mx-auto max-w-[70%] text-center">
+            <h2 class="mt-4 text-3xl md:text-5xl font-normal leading-tight md:leading-loose text-brand-purple pb-4">
+                Nuestros clientes dicen
+            </h2>
+        </header>
+        <div class="relative mt-12 flex items-center gap-6 md:gap-12">
+            <button
+                type="button"
+                class="flex shrink-0 items-center justify-center text-slate-600 transition hover:text-brand-purple"
+                data-slider-prev
+                aria-label="Testimonio anterior"
+            >
+                <i class="fa-solid fa-chevron-left text-2xl md:text-3xl"></i>
+            </button>
+            <div class="flex-1 overflow-hidden rounded-3xl bg-white shadow-card border border-slate-200 -mx-4 md:mx-0 max-w-[90%]">
+                <div id="testimonials-carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Testimonio 1 -->
+                    <div class="min-w-full px-4 py-12 md:py-20 md:px-10">
+                        <figure class="space-y-4 md:space-y-8 text-left">
+                            <blockquote class="text-lg md:text-4xl font-normal leading-[2.2] text-slate-800 max-w-full md:max-w-[80%]">
+                                &ldquo;Encontré un aliado ideal. Sales Cloud nos permitió profesionalizar y estructurar la metodología de ventas.&rdquo;
+                            </blockquote>
+                            <figcaption class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div class="flex items-center gap-4">
+                                    <img
+                                        src="{{ 'assets/img/home/martinez.jpg'|theme }}"
+                                        alt="Victor Martinez"
+                                        class="h-16 w-16 rounded-full object-cover"
+                                        loading="lazy"
+                                    />
+                                    <div>
+                                        <p class="text-xl font-semibold text-slate-900">Victor Martinez</p>
+                                        <p class="text-lg text-slate-600">Director General BePrime</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-start md:justify-end md:shrink-0">
+                                    <img
+                                        src="{{ 'assets/img/home/logo_ejemplo.svg'|theme }}"
+                                        alt="Logo empresa"
+                                        class="h-20 w-20 rounded-full object-cover"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="min-w-full px-4 py-12 md:py-20 md:px-10">
+                        <figure class="space-y-4 md:space-y-8 text-left">
+                            <blockquote class="text-lg md:text-4xl font-normal leading-[2.2] text-slate-800 max-w-full md:max-w-[80%]">
+                                &ldquo;El equipo de Eleva entendió nuestros procesos y aceleró la adopción de Salesforce en toda la compañía.&rdquo;
+                            </blockquote>
+                            <figcaption class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div class="flex items-center gap-4">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1544723795-3fb5070f5b38?auto=format&fit=crop&w=96&q=60"
+                                        alt="Ana López"
+                                        class="h-16 w-16 rounded-full object-cover"
+                                        loading="lazy"
+                                    />
+                                    <div>
+                                        <p class="text-xl font-semibold text-slate-900">Ana López</p>
+                                        <p class="text-lg text-slate-600">Chief Revenue Officer, DataNorth</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-start md:justify-end md:shrink-0">
+                                    <img
+                                        src="{{ 'assets/img/home/logo_ejemplo.svg'|theme }}"
+                                        alt="Logo empresa"
+                                        class="h-20 w-20 rounded-full object-cover"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- Testimonio 3 -->
+                    <div class="min-w-full px-4 py-12 md:py-20 md:px-10">
+                        <figure class="space-y-4 md:space-y-8 text-left">
+                            <blockquote class="text-lg md:text-4xl font-normal leading-[2.2] text-slate-800 max-w-full md:max-w-[80%]">
+                                &ldquo;Incorporamos automatizaciones de marketing que impactaron directamente en la generación de leads calificados.&rdquo;
+                            </blockquote>
+                            <figcaption class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div class="flex items-center gap-4">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=96&q=60"
+                                        alt="Marcos Herrera"
+                                        class="h-16 w-16 rounded-full object-cover"
+                                        loading="lazy"
+                                    />
+                                    <div>
+                                        <p class="text-xl font-semibold text-slate-900">Marcos Herrera</p>
+                                        <p class="text-lg text-slate-600">Head of Growth, NovaPay</p>
+                                    </div>
+                                </div>
+                                <div class="flex justify-start md:justify-end md:shrink-0">
+                                    <img
+                                        src="{{ 'assets/img/home/logo_ejemplo.svg'|theme }}"
+                                        alt="Logo empresa"
+                                        class="h-20 w-20 rounded-full object-cover"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <button
+                type="button"
+                class="flex shrink-0 items-center justify-center text-slate-600 transition hover:text-brand-purple"
+                data-slider-next
+                aria-label="Testimonio siguiente"
+            >
+                <i class="fa-solid fa-chevron-right text-2xl md:text-3xl"></i>
+            </button>
+        </div>
+    </div>
+</section>
+

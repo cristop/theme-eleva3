@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" id="top" style="scroll-behavior: smooth;">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,16 +45,16 @@
     {% partial 'footer' %}
     
     <!-- Botón Volver arriba flotante -->
-    <button
+    <a
+        href="#top"
         id="scroll-to-top"
-        type="button"
         class="fixed bottom-8 right-8 z-50 hidden items-center justify-center gap-2 rounded-full bg-brand-fuchsia text-sm font-normal text-white transition-all duration-300 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-fuchsia shadow-lg w-12 h-12 md:w-auto md:h-auto md:px-4 md:py-3 translate-y-4 opacity-0"
-        style="will-change: transform, opacity;"
+        style="will-change: transform, opacity; scroll-behavior: smooth;"
         aria-label="Volver arriba"
     >
         <i class="fa-solid fa-chevron-up text-xs"></i>
         <span class="hidden md:inline">Volver arriba</span>
-    </button>
+    </a>
     
     <!-- AOS - Animate On Scroll Library -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
