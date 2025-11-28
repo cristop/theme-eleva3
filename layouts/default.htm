@@ -1,3 +1,5 @@
+description = "Default layout"
+==
 <!DOCTYPE html>
 <html lang="es" id="top" style="scroll-behavior: smooth;">
 <head>
@@ -56,10 +58,13 @@
         <span class="hidden md:inline">Volver arriba</span>
     </a>
     
-    <!-- AOS - Animate On Scroll Library -->
+    <!-- AOS - Animate On Scroll Library (después de jQuery) -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
+
+    <!-- OctoberCMS Framework (carga jQuery y framework) - DEBE ir primero -->
     {% framework extras %}
+    
+    <!-- Scripts de la página (se cargan después del framework) -->
     {% scripts %}
 </body>
 </html>
